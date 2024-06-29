@@ -12,8 +12,8 @@ public class Teleoperation extends OpMode {
     Chassis chassis;
     Intake intake;
     public void init() {
-        //shooter = new Shooter(hardwareMap);
-        //shooter.setPower(0.5);
+        shooter = new Shooter(hardwareMap);
+        shooter.setPower(0.5);
 
         //chassis = new Chassis(hardwareMap);
 
@@ -24,12 +24,13 @@ public class Teleoperation extends OpMode {
     }
 
     public void loop() {
-        //shooter.powerUp();
+        shooter.powerUp();
         //chassis.setBackPower(-0.2);
         //chassis.setFrontPower(-0.2);
         //intake.spinLeftIntake(-1);
         //intake.spinRightIntake(-1);
-        intake.turnOnBelt();
+        //intake.turnOnBelt();
+        //intake.intakeIndexer();
 
 
         telemetry.addLine("Loop");
